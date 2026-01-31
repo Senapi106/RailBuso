@@ -1,0 +1,77 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #429e9d;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 70px;
+    background-color: #9d227e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* RIGHT NAV */
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+.nav-right a:hover {
+    color: #ff4d4d;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    padding: 8px 16px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* CONTENT */
+.container {
+    padding: 40px;
+    min-height: calc(100vh - 140px);
+}
+
+/* FOOTER */
+.footer {
+    height: 70px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #333;
+}
+
+/* FADE-IN ANIMATION */
+.welcome-text {
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
