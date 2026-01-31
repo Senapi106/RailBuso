@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Book Bus & Train Tickets</h2>
+
+<form method="post" action="{{ url_for('search') }}">
+
+    <label><b>Select Transport</b></label><br>
+    <input type="radio" name="mode" value="bus" checked> Bus
+    <input type="radio" name="mode" value="train"> Train
+
+    <br><br>
+
+    <label>From</label><br>
+    <input type="text" name="from_city" placeholder="Source city" required>
+    <br><br>
+
+    <label>To</label><br>
+    <input type="text" name="to_city" placeholder="Destination city" required>
+    <br><br>
+
+    <label>Journey Date</label><br>
+    <input type="date" name="journey_date" required>
+    <br><br>
+
+    <button type="submit">Search Buses & Trains</button>
+
+</form>
+
+{% endblock %}

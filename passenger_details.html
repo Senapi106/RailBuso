@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Passenger Details</h2>
+
+<p>
+    {{ transport | capitalize }}: <b>{{ name }}</b><br>
+    Price: ₹{{ price }}
+</p>
+
+<form method="post">
+    <label>Journey Date</label><br>
+    <input type="date" name="journey_date" required><br><br>
+    
+    <label>Passenger Name</label><br>
+    <input type="text" name="passenger_name" required><br><br>
+
+    <label>Age</label><br>
+    <input type="number" name="age" required><br><br>
+
+    <button type="submit">Confirm Booking</button>
+</form>
+
+{% endblock %}

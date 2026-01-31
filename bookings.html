@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>My Bookings</h2>
+
+{% if bookings %}
+    <ul>
+        {% for b in bookings %}
+            <li>
+                <b>{{ b.transport | capitalize }}</b> |
+                {{ b.name }} |
+                ₹{{ b.price }} |
+                Passenger: {{ b.passenger }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No bookings yet.</p>
+{% endif %}
+
+{% endblock %}

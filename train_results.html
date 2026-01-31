@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Available Trains</h2>
+
+<p>
+    From <b>{{ session["from_city"] }}</b> →
+    <b>{{ session["to_city"] }}</b>
+    <br>
+    Journey Date: <b>{{ session["journey_date"] }}</b>
+</p>
+
+<hr>
+
+{% for train in trains %}
+    <div style="border:1px solid #ccc; padding:15px; margin-bottom:10px;">
+        <b>{{ train.name }}</b><br>
+        Time: {{ train.time }}<br>
+        Price: ₹{{ train.price }}<br><br>
+        Seats Available: <b>{{ train.seats }}</b><br><br>
+
+        <a href="{{ url_for('passenger_details', transport='train', name=train.name, price=train.price) }}">
+    <button>Book Now</button>
+</a>
+
+    </div>
+{% endfor %}
+
+{% endblock %}
